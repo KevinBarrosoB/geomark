@@ -1,0 +1,81 @@
+/* styles.css (CSS EXTERNO propio) */
+:root{
+  --gm-primary: #6b5bd6;
+  --gm-primary-2: #7a55c7;
+  --gm-bg: #6c63ff;
+  --gm-text: #2b2b2b;
+}
+
+/* Regla CSS propia: gradiente de fondo */
+.gm-gradient-bg{
+  background: linear-gradient(180deg, var(--gm-bg) 0%, #6f55c3 50%, #5b2a86 100%);
+  min-height: 100vh;
+}
+
+/* Tarjeta con bordes suaves y sombra */
+.gm-card{
+  border: 0;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.12);
+}
+
+.gm-pill{
+  border-radius: 999px !important;
+}
+
+.gm-icon-badge{
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,.22);
+  color: #fff;
+}
+
+.gm-empty{
+  padding: 4rem 1rem;
+  text-align: center;
+  color: rgba(0,0,0,.60);
+}
+
+.gm-empty i{
+  font-size: 56px;
+  opacity: .35;
+  margin-bottom: 12px;
+}
+
+.gm-navbar{
+  background: #ffffff;
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+
+.gm-brand{
+  font-weight: 800;
+  letter-spacing: .3px;
+}
+
+.gm-search{
+  border-radius: 999px;
+  padding-left: 44px;
+  height: 52px;
+}
+
+.gm-search-wrap{
+  position: relative;
+}
+
+.gm-search-wrap .gm-search-icon{
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: .55;
+}
+
+.gm-section-title{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  font-weight: 800;
+}

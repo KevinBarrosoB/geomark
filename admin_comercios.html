@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GeoMark Admin - Comercios</title>
+
+  <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+  <script src="bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .admin-shell { min-height: 100vh; }
+    .admin-sidebar {
+      background: rgba(255,255,255,.96);
+      border-right: 1px solid rgba(0,0,0,.06);
+    }
+    .admin-link { color: rgba(0,0,0,.70); }
+    .admin-link.active { color: #000; font-weight: 700; }
+    .table thead th { background: rgba(0,0,0,.03); }
+  </style>
+</head>
+
+<body class="gm-gradient-bg">
+  <div class="admin-shell">
+
+    <div class="gm-navbar py-3">
+      <div class="container d-flex align-items-center justify-content-between">
+
+        <div>
+          <div class="gm-brand">GeoMark Admin</div>
+          <div class="small text-muted">Gestión de Comercios</div>
+        </div>
+
+        <div class="d-flex align-items-center gap-3">
+          <span class="badge text-bg-light px-3 py-2 rounded-pill">
+            Administrador
+          </span>
+
+          <button class="btn btn-outline-dark gm-pill px-4">
+            Salir
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="row g-4">
+
+        <aside class="col-12 col-lg-3">
+          <div class="gm-card card admin-sidebar p-3 w3-card-4 w3-round-large">
+            <div class="fw-bold mb-2">Menú</div>
+
+            <div class="list-group list-group-flush">
+              <span class="list-group-item admin-link">Dashboard</span>
+              <span class="list-group-item admin-link active">Comercios</span>
+              <span class="list-group-item admin-link">Categorías</span>
+              <span class="list-group-item admin-link">Productos</span>
+            </div>
+          </div>
+        </aside>
+
+        <main class="col-12 col-lg-9">
+          <div class="gm-card card p-4 w3-card-4 w3-round-large">
+
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-2">
+              <div>
+                <h4 class="mb-1 fw-bold">Comercios</h4>
+                <div class="text-muted">Aprobar, rechazar o suspender registros</div>
+              </div>
+
+              <div class="d-flex gap-2">
+                <button class="btn btn-outline-primary gm-pill px-4">Exportar</button>
+                <button class="btn btn-primary gm-pill px-4">Nuevo</button>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-2">
+
+              <div class="col-12 col-md-6">
+                <label class="form-label fw-semibold">Buscar comercio</label>
+                <input class="form-control gm-search"
+                       type="text"
+                       placeholder="Ej. panadería, ferretería...">
+              </div>
+
+              <div class="col-12 col-md-3">
+                <label class="form-label fw-semibold">Estado</label>
+                <select class="form-select form-select-lg">
+                  <option>Pendiente</option>
+                  <option>Aprobado</option>
+                  <option>Rechazado</option>
+                  <option>Suspendido</option>
+                </select>
+              </div>
+
+              <div class="col-12 col-md-3">
+                <label class="form-label fw-semibold">Categoría</label>
+                <select class="form-select form-select-lg">
+                  <option>Todas</option>
+                  <option>Alimentos</option>
+                  <option>Servicios</option>
+                  <option>Ferretería</option>
+                  <option>Sastrería</option>
+                </select>
+              </div>
+
+            </div>
+
+            <div class="table-responsive mt-4">
+              <table class="table align-middle">
+                <thead>
+                  <tr>
+                    <th>Comercio</th>
+                    <th>Categoría</th>
+                    <th>Zona</th>
+                    <th>Estado</th>
+                    <th class="text-end">Acciones</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+
+                  <tr>
+                    <td>
+                      <div class="fw-semibold">Panadería “La Espiga”</div>
+                      <div class="small text-muted">correo@ejemplo.com</div>
+                    </td>
+                    <td><span class="badge text-bg-light rounded-pill">Alimentos</span></td>
+                    <td>Centro</td>
+                    <td><span class="badge text-bg-warning rounded-pill px-3">Pendiente</span></td>
+                    <td class="text-end">
+                      <button class="btn btn-sm btn-success gm-pill px-3">Aprobar</button>
+                      <button class="btn btn-sm btn-outline-danger gm-pill px-3 ms-2">Rechazar</button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="fw-semibold">Ferretería “El Tornillo”</div>
+                      <div class="small text-muted">contacto@ejemplo.com</div>
+                    </td>
+                    <td><span class="badge text-bg-light rounded-pill">Ferretería</span></td>
+                    <td>Norte</td>
+                    <td><span class="badge text-bg-warning rounded-pill px-3">Pendiente</span></td>
+                    <td class="text-end">
+                      <button class="btn btn-sm btn-success gm-pill px-3">Aprobar</button>
+                      <button class="btn btn-sm btn-outline-danger gm-pill px-3 ms-2">Rechazar</button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="fw-semibold">Autolavado “Brillo”</div>
+                      <div class="small text-muted">soporte@ejemplo.com</div>
+                    </td>
+                    <td><span class="badge text-bg-light rounded-pill">Servicios</span></td>
+                    <td>Sur</td>
+                    <td><span class="badge text-bg-success rounded-pill px-3">Aprobado</span></td>
+                    <td class="text-end">
+                      <button class="btn btn-sm btn-outline-dark gm-pill px-3">Suspender</button>
+                      <button class="btn btn-sm btn-outline-primary gm-pill px-3 ms-2">Ver</button>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+        </main>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GeoMark - Inicio</title>
+
+  <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+  <script src="bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="gm-gradient-bg">
+
+  <nav class="navbar gm-navbar py-3">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="gm-brand">
+        GeoMark
+      </div>
+
+      <div class="d-flex gap-2">
+        <button class="btn btn-outline-primary gm-pill px-4">
+          Iniciar Sesión
+        </button>
+
+        <button class="btn btn-primary gm-pill px-4">
+          Registrarse
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5">
+
+    <section class="mx-auto gm-max-search">
+      <div class="gm-card card p-4 w3-card-4 w3-round-large">
+
+        <label class="form-label fw-semibold mb-2">
+          Buscar
+        </label>
+
+        <input class="form-control gm-search"
+               type="text"
+               placeholder="Buscar productos o comercios...">
+
+      </div>
+    </section>
+
+    <section class="mt-4">
+      <div class="gm-card card overflow-hidden w3-card-4 w3-round-large">
+
+        <div class="p-4 text-white"
+             style="background: linear-gradient(90deg, var(--gm-bg), var(--gm-primary-2));">
+          <h5 class="m-0 fw-bold">
+            Comercios Cercanos
+          </h5>
+        </div>
+
+        <div class="bg-white gm-empty w3-center">
+          <h5 class="fw-bold mb-1">No hay comercios disponibles</h5>
+          <p class="mb-0">Los comercios aparecerán aquí cuando estén registrados</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
